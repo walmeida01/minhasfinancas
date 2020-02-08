@@ -7,12 +7,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Builder;
 import lombok.Data;
 
 
 @Entity
 @Table(name = "usuario", schema = "financas")
 @Data
+@Builder
 
 public class Usuario {
 	
@@ -28,7 +30,8 @@ public class Usuario {
 	private String email;
 	
 	@Column(name = "senha")
-	private String senha;	
+	private String senha;
+
 	
 }
 
